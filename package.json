@@ -1,0 +1,29 @@
+{
+  "name": "jest-projects-cwd-repro",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test:packages": "jest --projects ./packages/*",
+    "test:dir": "npm run test --prefix packages/test",
+    "repro": "npm run test:dir && npm run test:packages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andarist/jest-projects-cwd-repro.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andarist/jest-projects-cwd-repro/issues"
+  },
+  "homepage": "https://github.com/Andarist/jest-projects-cwd-repro#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "jest": "^24.9.0"
+  }
+}
